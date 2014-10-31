@@ -10,12 +10,184 @@
         bottom: 0;
         left: 0;
     }
+    .column1{
+        float:left;
+        margin-top:10px;
+        width: 500px;
+        height:500px;
+    }
+    .column2{
+        float:right;
+        wdith:250px;
+    }
 </style>
 </head>
 <body>
+<div id="wrapper">
+<div id="editor" class="column1"></div>
+<div class="column2">
+    <textarea rows="32" cols="100">
+        START
+==========================
+=== SYSTEM INFORMATION ===
+==========================
 
-<div id="editor"></div>
-    
+Log Date:                               Thu Aug 21 23:59:59 2008
+OS Release:                             1.1.0
+Serial Number:                          037DF674
+Model:                                  G200
+Hostname:                               UOIKWT
+Domain Name:                            medisoft.com
+
+
+============================
+=== MEMORY CONFIGURATION ===
+============================
+
+DIMM:   1
+Size:   1073741824
+Speed:  UP 677(MHz)
+
+DIMM:   2
+Size:   1073741824
+Speed:  OK 677(MHz)
+
+DIMM:   3
+Size:   1073741824
+Speed:  DOWN 677(MHz)
+
+DIMM:   4
+Size:   1073741824
+Speed:  OK 677(MHz)
+
+DIMM:   5
+Size:   1073741824
+Speed:  DOWN 677(MHz)
+ AT EPOCH LATEST SELECT count('1') FROM xiotech_pod._raid_time WHERE xiotech_pod._raid_time._sys_ident = '3f7ad313c2780622'  AND xiotech_pod._raid_time.time_week  = '1297555200' AND xiotech_pod._raid_time.time_day   = '1297728000' AND xiotech_pod._raid_time.time_hour  = '1297756800' AND xiotech_pod._raid_time.time_10min = '1297756800' AND xiotech_pod._raid_time.time_epoch = '1297756800'
+==============================
+=== PCI SLOT CONFIGURATION ===
+==============================
+
+Slot: 0 (1.7GHz)
+   Device Type:     Motherboard
+   Model:           GX3900
+   Serial Number:   425VK1
+   FW Version:      1A
+   Status:          Online
+Smart Data Attributes
+Spin up time              (value/trough/threshold/raw/updated): 100/100/0/0/Jan 24 2011 00:37:54
+Start stop count          (value/trough/threshold/raw/updated): 100/100/0/0/Jan 24 2011 00:37:54
+Reallocated sector count  (value/trough/threshold/raw/updated): 100/100/0/0/Jan 24 2011 00:37:54
+Power on hours            (value/trough/threshold/raw/updated): 100/100/0/2807/Jan 24 2011 00:37:54
+Power cycle count         (value/trough/threshold/raw/updated): 100/100/0/24/Jan 24 2011 00:37:54
+Power off retract count   (value/trough/threshold/raw/updated): 100/100/0/11/Jan 24 2011 00:37:54
+Host write count          (value/trough/threshold/raw/updated): 200/200/0/280455/Jan 24 2011 00:37:54
+Available reserved space  (value/trough/threshold/raw/updated): 100/100/10/0/Jan 24 2011 00:37:54
+Media wearout indicator   (value/trough/threshold/raw/updated): 96/96/0/0/Jan 24 2011 00:37:54
+
+Slot: 1 (1.7GHz)
+   Device Type:     Ethernet Adapter
+   Model:           EA002
+   Serial Number:   541FE1
+   FW Version:      2EX
+   Status:          Offline
+Smart Data Attributes
+Spin up time              (value/trough/threshold/raw/updated): 100/100/0/0/Jan 24 2011 00:37:54
+Start stop count          (value/trough/threshold/raw/updated): 100/100/0/0/Jan 24 2011 00:37:54
+Reallocated sector count  (value/trough/threshold/raw/updated): 100/100/0/0/Jan 24 2011 00:37:54
+Power on hours            (value/trough/threshold/raw/updated): 100/100/0/2822/Jan 24 2011 00:37:54
+Power cycle count         (value/trough/threshold/raw/updated): 100/100/0/24/Jan 24 2011 00:37:54
+Power off retract count   (value/trough/threshold/raw/updated): 100/100/0/11/Jan 24 2011 00:37:54
+Host write count          (value/trough/threshold/raw/updated): 200/200/0/279616/Jan 24 2011 00:37:54
+Available reserved space  (value/trough/threshold/raw/updated): 100/100/10/0/Jan 24 2011 00:37:54
+Media wearout indicator   (value/trough/threshold/raw/updated): 96/96/0/0/Jan 24 2011 00:37:54
+
+Slot: 2 (1.7GHz)
+   Device Type:     Shelf Controller
+   Model:           SC001
+   Serial Number:   853WE4
+   FW Version:      2AB
+   Status:          Online
+Smart Data Attributes
+Spin up time              (value/trough/threshold/raw/updated): 100/100/0/0/Jan 24 2011 00:37:54
+Start stop count          (value/trough/threshold/raw/updated): 100/100/0/0/Jan 24 2011 00:37:54
+Reallocated sector count  (value/trough/threshold/raw/updated): 100/100/0/0/Jan 24 2011 00:37:54
+Power on hours            (value/trough/threshold/raw/updated): 100/100/0/2813/Jan 24 2011 00:37:54
+Power cycle count         (value/trough/threshold/raw/updated): 100/100/0/27/Jan 24 2011 00:37:54
+Power off retract count   (value/trough/threshold/raw/updated): 100/100/0/14/Jan 24 2011 00:37:54
+Host write count          (value/trough/threshold/raw/updated): 200/200/0/277639/Jan 24 2011 00:37:54
+Available reserved space  (value/trough/threshold/raw/updated): 100/100/10/0/Jan 24 2011 00:37:54
+Media wearout indicator   (value/trough/threshold/raw/updated): 96/96/0/0/Jan 24 2011 00:37:54
+
+==========================
+=== VOLUME INFORMATION ===
+==========================
+
+Volume    Size(GB)  Used(GB)  Avail(GB) Raid Group
+------    --------  --------  --------- ----------
+/vol0     1000      11        989       rdg001
+/vol1     1000      108       892       rdg002
+/vol2     1000      95        905       rdg003
+/vol3     1000      31        969       rdg004
+
+
+========================
+=== AGGR INFORMATION ===
+========================
+
+Aggr       State         Status       Options
+----       -------       ------       -------
+agg0       online        rd1          x
+           ofline        rd2          y
+           online        rd3          z
+agg1       online        rd4          a
+           online        rd5          b
+=========================
+=== AGGR2 INFORMATION ===
+=========================
+
+Aggr       State         Status        Options
+----       -------       ------        ---------------------------
+Agg0       online        raid1         root, diskroot, nosnap=off,
+                                       raidtype=raid4, raidsize=8,
+                                       ignore_inconsistent=off,
+                                       snapmirrored=off,
+                                       resyncsnaptime=60,
+                                       fs_size_fixed=off,
+                                       lost_write_protect=on
+
+================
+=== MESSAGES ===
+================
+
+
+Thu Aug 21 01:00:00 2008 <UOIKWT> [system] INFO syslogd 1.4.1: restart.
+Thu Aug 21 01:02:40 2008 <UOIKWT> [system] INFO kernel: do_vfs_lock: VFS is out of sync with lock manager!
+Thu Aug 21 01:05:20 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Recieved repsonse with invalid source port 2367 on interface 'eth0.0'
+Thu Aug 21 01:08:00 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Invalid legacy unicast query packet.
+Thu Aug 21 01:10:40 2008 <UOIKWT> [system] INFO last message repeated 2 times.
+Thu Aug 21 01:13:20 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Recieved repsonse with invalid source port 2367 on interface 'eth0.0'
+Thu Aug 21 01:16:00 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Recieved repsonse with invalid source port 2367 on interface 'eth0.0'
+Thu Aug 21 01:18:40 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Invalid legacy unicast query packet.
+Thu Aug 21 01:21:20 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Recieved repsonse with invalid source port 2367 on interface 'eth0.0'
+Thu Aug 21 01:24:00 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Out of Memory.
+Thu Aug 21 01:26:40 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: No child processes.
+Thu Aug 21 01:29:20 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Invalid file Descriptor.
+Thu Aug 21 01:32:00 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Invalid file to execute.
+Thu Aug 21 01:34:40 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Interrupted system call.
+Thu Aug 21 01:37:20 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Operation not permitted.
+Thu Aug 21 01:40:00 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Permission denied.
+Thu Aug 21 01:42:40 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: No such file or directory.
+Thu Aug 21 01:45:20 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Device or resource busy.
+Thu Aug 21 01:48:00 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: File exists.
+Thu Aug 21 01:50:40 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: No such device.
+Thu Aug 21 01:53:20 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: Invalid argument.
+Thu Aug 21 01:56:00 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: File table overflow.
+Thu Aug 21 01:58:40 2008 <UOIKWT> [system] INFO avahi-daemon[2386]: File too large.
+Thu Aug 21 02:00:00 2008 <UOIKWT> [disk] WARNING Media Write Error on disk 11.3.
+    </textarea>
+</div>
+</div>>
 <script src="/ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
 <script src="ace-builds/src-noconflict/ext-language_tools.js"></script>
 <script>

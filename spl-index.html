@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>SPL in Action</title>
+<link href="style.css" rel="stylesheet" type="text/css">
+<style type="text/css" media="screen">
+    #editor { 
+        position: absolute;
+        width: 500px;
+        height: 400px;
+    }
+</style>
+</head>
+<body>
+
+<div id="wrapper">
+
+<div class="content" style="width: 950px">
+    <div class="column1" style="margin-top: 47px">
+        <textarea id="editor" style="width:300px; height:300px">
+           /* Here is the content of editor */
+        </textarea>
+    </div>
+    <div class="column2">
+         <textarea id="textarea" style="width:300px; height:300px">
+           /* Here is the content of second editor */
+        </textarea>
+    </div>
+</div>
+</div>
+
+
+
+
+<script src="ace-builds/src-noconflict/ace.js" type="text/javascript" charset="utf-8"></script>
+<script src="ace-builds/src-noconflict/ext-language_tools.js"></script>
+<script>
+var editor = ace.edit("editor");
+ ace.require("ace/ext/language_tools");
+editor.setTheme("ace/theme/twilight");
+editor.getSession().setMode("ace/mode/javascript");
+editor.setOptions({
+        enableBasicAutocompletion: true,
+        enableSnippets: true,
+        enableLiveAutocompletion: false
+    });
+</script>
+
+<script>
+function inject(options, callback) {
+    var baseUrl = options.baseUrl || "ace-builds/src-noconflict";
+    
+    var load = function(path, callback) {
+        var head = document.getElementsByTagName('head')[0];
+        var s = document.createElement('script');
+
+        s.src = baseUrl + "/" + path;
+        head.appendChild(s);
+
+        s.onload = s.onreadystatechange = function(_, isAbort) {
+            if (isAbort || !s.readyState || s.readyState == "loaded" || s.readyState == "complete") {
+                s = s.onload = s.onreadystatechange = null;
+                if (!isAbort)
+                    callback();
+            }
+        };
+    };
+
+    load("ace.js", function() {
+        ace.config.loadModule("ace/ext/textarea", function() {
+            var event = ace.require("ace/lib/event");
+            var areas = document.getElementsByTagName("textarea");
+            for (var i = 0; i < areas.length; i++) {
+                event.addListener(areas[i], "click", function(e) {
+                    if (e.detail == 3) {
+                        ace.transformTextarea(e.target, options.ace);
+                    }
+                });
+            }
+            callback && callback();
+        });
+    });
+}
+
+// Call the inject function to load the ace files.
+var textAce;
+inject({}, function () {
+    // Transform the textarea on the page into an ace editor.    
+    var t = document.querySelector("textarea");
+    textAce = ace.require("ace/ext/textarea").transformTextarea(t);
+    setTimeout(function(){textAce.setDisplaySettings(true)});
+});
+
+
+</script>
+</body>
+</html>

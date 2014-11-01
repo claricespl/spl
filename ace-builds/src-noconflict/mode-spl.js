@@ -6,14 +6,15 @@ var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var SplHighlightRules = function() {
     var keywords = "define";
-    var supportType = exports.supportType = "dimension|time";    
+    var supportType = exports.supportType = "aspect|dimension|duration|entropy|eternal|high|long|low|namespace|time|short|"+
+    "static|begins|with|ends|context|table|icon|column|colsplit|colrep|coldrop|colcopy";
 
     var builtinConstants = (
         "true|false|null"
     );
 
     var builtinFunctions = (
-        "count|min|max|avg|sum|rank|now|coalesce|main"
+        "constrain|add_context|colmap|colfill|count|min|max|avg|sum|rank|now|coalesce|main"
     );
 
     var keywordMapper = this.createKeywordMapper({

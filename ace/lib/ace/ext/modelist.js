@@ -141,6 +141,7 @@ var supportedModes = {
     snippets:    ["snippets"],
     Soy_Template:["soy"],
     Space:       ["space"],
+    Spl:         ["spl"],
     SQL:         ["sql"],
     Stylus:      ["styl|stylus"],
     SVG:         ["svg"],

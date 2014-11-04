@@ -36,8 +36,8 @@ var TextHighlightRules = require("./text_highlight_rules").TextHighlightRules;
 
 var SplHighlightRules = function() {
     var keywords = "define";
-    var supportType = exports.supportType = "aspect|dimension|duration|entropy|eternal|high|long|low|namespace|time|short|"+
-    "static|begins|with|ends|context|table|icon|column|colsplit|colrep|coldrop|colcopy";
+    var supportType = exports.supportType = "aspect|begins|conf|description|dimension|duration|entropy|eternal|high|long|low|namespace|time|short|"+
+    "pragma|status|static|with|ends|context|table|icon|column|colsplit|colrep|coldrop|colcopy|units";
     var supportTypeColor = exports.supportTypeColor = "aqua|black|blue|fuchsia|gray|green|lime|maroon|navy|olive|orange|purple|red|silver|teal|white|yellow";
 
     var builtinConstants = (
